@@ -42,7 +42,8 @@ const chokidar = require('chokidar');
 const path = require('path');
 const Table = require('cli-table3');
 const os = require('os');
-const env = require("./config.json")
+const env = require("./config.json");
+const PhoneNumber = require("awesome-phonenumber");
 
 async function connectToWhatsApp() {
   const {
