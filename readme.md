@@ -36,7 +36,7 @@ Proyek ini mengandalkan beberapa paket Node.js yang kuat:
 1. Kloning Repositori
 ```javascript
 git clone https://github.com/Dwi-Merajah/Base-PairingV2
-cd Dwi-Base
+cd Base-PairingV2
 npm install
 npm start
 ```
