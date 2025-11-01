@@ -1,0 +1,49 @@
+{
+  "name": "Dwi-Base",
+  "version": "1.0.0",
+  "description": "Base Pairing With Case Only - Baileys (WhiskeySockets)",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "whatsapp-bot",
+    "baileys",
+    "whiskeysockets",
+    "dwi-merajah",
+    "bot",
+    "whatsappbot",
+    "botwa",
+    "basebotwa",
+    "wabot",
+    "pairing",
+    "neoxr",
+    "Base-Pairing-V2"
+  ],
+  "author": "Dwi-Merajah",
+  "license": "MIT",
+  "dependencies": {
+    "@neoxr/wb": "5.10.21",
+    "axios": "^1.3.4",
+    "awesome-phonenumber": "^5.6.0",
+    "baileys": "^7.0.0-rc.6",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.5",
+    "chokidar": "^4.0.3",
+    "link-preview-js": "^3.0.14",
+    "moment-timezone": "^0.5.45",
+    "file-type": "~16.5.2",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "node-gtts": "^2.0.2",
+    "node-webpmux": "^3.1.7",
+    "pino": "^8.19.0",
+    "jimp": "0.16.1",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.34.1",
+    "syntax-error": "1.4.0",
+    "translate-google-api": "1.0.4",
+    "yargs": "^17.5.1"
+  }
+}
