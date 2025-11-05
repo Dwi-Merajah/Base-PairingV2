@@ -42,9 +42,9 @@ const chokidar = require('chokidar');
 const path = require('path');
 const Table = require('cli-table3');
 const os = require('os');
-const env = require("./config.json");
+const env = require("./config.json")
 const PhoneNumber = require("awesome-phonenumber");
-
+   
 async function connectToWhatsApp() {
   const {
     state,
@@ -161,19 +161,14 @@ async function connectToWhatsApp() {
       await saveCreds();
     }
 
-    const upsert = ev["messages.upsert"];
-    if (upsert) {
-      if (upsert.type === "notify") {
-        const msg = upsert.messages?.[0];
-        if (msg) {
-          const message = simple.smsg(sock, msg);
-          if (message) {
-            if (message.key?.remoteJid !== "status@broadcast" && !message.key.fromMe) {
-              features(upsert, sock, message);
-            }
-          }
-        }
-      }
+   const upsert = ev["messages.upsert"];
+   if (upsert) {
+   if (upsert.type !== "notify") return;
+    const message = simple.smsg(sock, upsert);
+    if (message.key && message.key.remoteJid === "status@broadcast") return;
+    if (message.key.fromMe) return
+        if (!message) return;
+            features(upsert, sock, message);
     }
 
     if (ev["call"]) {
